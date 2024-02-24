@@ -1,0 +1,618 @@
+/*
+Theme Name: QuickStrap
+Theme URI: https://www.quickonlinetips.com/archives/quickstrap-wordpress-theme/
+Author: QuickOnlineTips
+Author URI: https://www.quickonlinetips.com/
+Description: A lightweight 3-columns responsive Bootstrap starter theme, Font Awesome preloaded, full width page options, 3 footer widgets, SEO optimized, fast loading, minimal styling, easy to customize WordPress theme.
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 6.1
+Requires PHP: 7.0
+Tags: three-columns, right-sidebar, left-sidebar, threaded-comments, sticky-post, custom-background,  translation-ready, editor-style, custom-menu, featured-images
+Text Domain: quickstrap
+License: GNU General Public License v2.0
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+QuickStrap WordPress Theme, Copyright 2019 QuickOnlineTips.com
+QuickStrap is distributed under the terms of the GNU GPL
+*/
+
+
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+h1, h2 {
+  color: #343a40;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+/* Wsp Button */
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF !important;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 2;
+}
+
+#wspg {
+  color: green;
+  font-weight: 700;
+  font-size: 18px;
+	text-decoration: none;
+}
+
+
+section {
+  padding: 60px 0 !important;
+  overflow: hidden;
+}
+
+h4 {
+	color: black !important;
+}
+
+.card-title {
+    color: black !important;
+}
+
+.section-title h3 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 0;
+    background: #343a40;
+    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+
+/* s1 news */
+
+.carousel-control-next-icon {
+    background-image: url(https://trucksrepair.cl/wp-content/uploads/2023/12/next-icon.png) !important;
+}
+
+.carousel-control-prev-icon {
+	background-image: url(https://trucksrepair.cl/wp-content/uploads/2023/12/prev-icon.png) !important;
+}
+
+
+
+
+#news_mobil {
+  min-height: 80vh !important;
+}
+
+#titulo_h1 {
+	display: none;	
+}
+
+.card {
+    border-radius: 0px !important;
+    border: 1px solid #565656 !important;
+    padding: 22px;
+}
+
+.carousel-control-next-icon {
+    background-image: url()
+
+}
+.rm_breadcrumb {
+	color: white !important;
+	text-transform: uppercase;
+}
+
+nav.rank-math-breadcrumb {
+    text-transform: uppercase;
+}
+
+.newtitle {
+	text-decoration: none;
+}
+
+nav.rank-math-breadcrumb a, span.last {
+    color: white;
+}
+
+/* News Carrousel */
+
+.carousel-inner .carousel-item {
+  transition: transform 1s ease;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 40%;
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.carousel-caption.slide {
+  top: 0;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.caption-bottom {
+  position: relative;
+  bottom: 4vh;
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.caption-bottom.slide {
+  bottom: -90vh;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+
+
+/* s2 cta */ 
+
+.repuestos {
+    background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.9)), url("https://trucksrepair.cl/wp-content/uploads/2023/10/cta-bg.jpg") fixed center center;
+    background-size: cover;
+    padding: 60px 0;
+    max-width: 100%;
+}
+
+.repuestos .repuestos-btn {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 25px;
+    transition: 0.5s;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cta .cta-btn {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 25px;
+    transition: 0.5s;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* s3 services */
+
+/** MOBILE */
+
+
+@media (max-width: 720px) {
+
+	#contenido_home .news_desktop {
+		display: none;
+	}
+	
+  #news_mobil, #servmobil {
+    display: block;
+  }
+
+  #news_desktop, #servdesktop {
+    display: none;
+  }    
+
+}
+
+/** LAPTOP */
+
+
+@media (min-width: 700px) {
+
+  #news_desktop, #servdesktop {
+    display: block;
+  }
+
+
+  #news_mobil, #servmobil  {
+    display: none;
+  }
+
+}
+
+
+/** DESKTOP */
+
+@media (min-width: 1500px) {
+	
+
+  #servdesktop {
+    display: block;
+  }  
+
+  #news_mobil, #servmobil {
+    display: none;
+  }
+
+
+}
+
+#card_href {
+	color: #cc1616; !important;
+	font-weight: bold;
+}
+
+
+span {
+	color: #cc1616;
+}
+
+.swiper-pagination-bullet {
+	border-radius: 0px !important;
+	width: 45px !important;
+	height: 4px !important;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #cc1616 !important;
+}
+
+
+
+/* s4 faq */
+
+
+.faq {
+    background: #f2f2f2;
+}
+
+.accordion-button:not(.collapsed) {
+    color: red;
+    background-color: white !important;
+}
+
+.faq-list {
+  color: #343a40;  
+  font-weight: 500;
+}
+
+
+
+
+/* s4 noticia */
+
+.new {
+  background-color: black;
+}
+
+#bnew {
+	background-color: red !important;
+}
+
+#snew {
+  color: red;
+}
+
+
+/* s5 blog */
+
+span a {
+    color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+span.breadcrumb_last {
+    color: white;
+	text-decoration: none;
+	text-transform: uppercase;	
+}
+
+a.home_nav {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link {
+	color: black !important;
+	font-weight: bold !important;
+}
+
+a.nav-link.single_nav {
+    font-weight: 100 !important;
+}
+
+
+.jumbotron {
+  position: relative;
+  background:none;
+  background-image: url("https://trucksrepair.cl/wp-content/uploads/2023/11/blog-bg.png");  
+  border-radius: 0px;
+}
+
+
+.jumbotron:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity : 0.2;
+    z-index: -1;
+}
+
+.breadcrumbw {
+	color: white !important;
+}
+
+.wp-caption-text { 
+    font-style: italic;
+    color: #999;
+}
+
+.sticky {
+    background: #f9f9f9;
+    padding: 10px 15px 5px; 
+	border-left: 2px solid #CCC;
+}
+
+.gallery-caption {
+    font-style: italic;
+    color: #999;
+}
+
+.bypostauthor {
+    background: #f9f9f9;
+}
+
+.alignright {
+    float: right;
+    margin-left: 10px;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 10px;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Essential Styles ------------------- */
+.h1, h1 {
+    font-size: 2.2rem;
+}
+.h2, h2 {
+    font-size: 1.8rem;
+}
+.h3, h3 {
+    font-size: 1.6rem;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h2 a  {
+	color: #333;
+	text-decoration: none;
+}
+
+h2 a:hover {
+	text-decoration: underline;
+}
+
+.sidebar,
+.sidebar-left,
+.footer-widget {
+    overflow: hidden;
+}
+
+.sidebar-widget ul,
+.footer-widget ul {
+    list-style: none !important;
+    padding-left: 5px;
+}
+ 
+ 
+.navbar-nav a {
+	color: #DDD;
+	display: block;
+    padding: .5rem 1rem;
+}
+ 
+.type-page {
+    overflow: hidden;
+}
+
+.post {
+    overflow: hidden;
+}
+ 
+.page img {
+    max-width: 100%;
+    height: auto;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+}
+
+.comment {
+    margin: 15px 0;
+    padding: 10px; 
+    list-style: none;
+	border-top: 1px solid #DDD;
+}
+
+.commentlist {
+    padding-left: 0px;
+}
+
+.comment-author { 
+}
+
+.fn {
+    font-weight: bold;
+}
+
+.comment-meta { 
+    margin: 5px 0 10px;
+}
+
+.depth-2,
+.depth-3,
+.depth-4,
+.depth-5 {
+    list-style: none !important;
+}
+
+textarea {
+    width: 100%
+}
+
+embed,
+iframe,
+object,
+video {
+    max-width: 100%;
+}
+
+/* s6 contact */
+
+#contacto i {
+    font-size: 20px;
+    color: #cc1616;
+    width: 44px;
+    height: 44px;
+    background: #f1f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/** Footer */
+
+#themef {
+  display: none;
+}
+
+#footer {
+  background: url("https://trucksrepair.cl/wp-content/uploads/2023/10/footer-bg.png") center center;
+}
+
+#footer .footer-bottom {
+  border-top: 1px solid #282828;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#footer .copyright {
+  text-align: center;
+  float: left;
+}
+
+
+.social-links a {
+  font-size: 36px;
+  display: inline-block;
+  color: #fff !important;
+  line-height: 1;
+  margin-right: 22px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.emptybox {
+	border: 1px solid #CCC;
+	background-color: #fff;
+	padding: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/** BLOG */
+
+.post_tittle {
+    text-transform: uppercase;
+}
+
+.post_title_divider {
+    width: 4em;
+    height: 0.2em;
+    margin-top: 1.4em;
+    margin-bottom: 1.6em;
+    background-color: red;    
+}
+
+.single_nav {
+    color: black !important;
+    border-bottom: 1px solid #cdcdcd !important;
+}
+
+
+/* Text for screen readers --------------- */
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
